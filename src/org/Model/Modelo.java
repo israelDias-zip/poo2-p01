@@ -1,25 +1,30 @@
 package org.Model;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Modelo {
     private long id;
     private String nome;
     private Date dataModelo;
     private int qntModelo;
+    private List<Veiculo> listVeiculo;
 
     public Modelo() {
         this.id = 0;
         this.nome = "";
         this.dataModelo = new Date();
         this.qntModelo = 0;
+        this.listVeiculo = new ArrayList<>();
     }
 
-    public Modelo(long id, String nome, Date dataModelo, int qntModelo) {
+    public Modelo(long id, String nome, Date dataModelo, int qntModelo, List<Veiculo> veiculos) {
         this.id = id;
         this.nome = nome;
         this.dataModelo = dataModelo;
         this.qntModelo = qntModelo;
+        this.listVeiculo = veiculos;
     }
 
 //GETTERS E SETTERS
